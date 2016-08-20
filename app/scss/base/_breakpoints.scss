@@ -1,7 +1,0 @@
-// Responsive
-$mobile: new-breakpoint(max-width 768px);
-$small-tablet: new-breakpoint(min-width 768px);
-$small-tablet-stop: new-breakpoint(min-width 768px max-width 992px);
-$tablet: new-breakpoint(min-width 992px);
-$tablet-stop: new-breakpoint(min-width 992px max-width 1200px);
-$desktop: new-breakpoint(min-width 1200px);
