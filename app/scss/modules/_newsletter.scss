@@ -1,0 +1,36 @@
+.newsletter {
+  background: $color-secondary url('../img/newsletter_bg.png') 50% 50% no-repeat;
+  background-size: cover;
+  color: $color-initial;
+}
+
+.newsletter-form {
+  padding-bottom: 5em;
+  padding-top: 5em;
+  @include row;
+
+  input:first-child {
+    @include span-columns(1 of 1);
+  }
+
+  input:last-child {
+    @include span-columns(1 of 1);
+  }
+
+  @include media($small-tablet) {
+    @include outer-container(80%);
+
+    input:first-child {
+      @include span-columns(2 of 3);
+    }
+
+    input:last-child {
+      @include span-columns(1 of 3);
+    }
+  }
+
+  @include media ($tablet) {
+    padding-bottom: 10em;
+    padding-top: 10em;
+  }
+}

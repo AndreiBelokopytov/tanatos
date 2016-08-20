@@ -1,0 +1,34 @@
+.page-footer {
+  padding: 4.4em 0;
+  background-color: $color-secondary;
+  color: $color-initial;
+  @include row;
+
+  .copyright {
+    font-size: 1.6em;
+    line-height: 1;
+    text-transform: uppercase;
+    @include span-columns(1 of 1);
+    @include omega;
+    text-align: center;
+
+    &:last-child {
+      margin-top: 1em;
+    }
+
+    @include media($small-tablet) {
+      @include span-columns(1 of 2);
+      text-align: left;
+
+      &:last-child {
+        text-align: right;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .footer-logo {
+    position: relative;
+    top: 2px;
+  }
+}

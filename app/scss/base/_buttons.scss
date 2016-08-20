@@ -1,0 +1,58 @@
+$button-font-size-small: 1.2rem;
+$button-font-size-normal: 1.6rem;
+
+.button {
+  display: inline-block;
+  padding: 1em;
+  background-color: transparent;
+  border-color: $ligh-gray;
+  border-radius: $border-default-radius;
+  border-style: solid;
+  border-width: $border-default-width;
+  color: $color-secondary;
+  cursor: pointer;
+  font-size: $button-font-size-small;
+  line-height: 1em;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all .2s;
+
+  &:hover {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-initial;
+  }
+
+  &.button-primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-initial;
+
+    &:hover {
+      background-color: lighten($color-primary, 6%);
+      border-color: lighten($color-primary, 6%);
+      color: lighten($color-initial, 10%);
+    }
+  }
+
+  &.button-initial {
+    background-color: $color-initial;
+    border-color: $color-initial;
+    color: $color-primary;
+
+    &:hover {
+      background-color: lighten($color-initial, 8%);
+      border-color: lighten($color-initial, 8%);
+    }
+  }
+
+  @include media($small-tablet) {
+    font-weight: 600;
+    font-size: $button-font-size-normal;
+  }
+
+  @include media($desktop) {
+    font-size: $button-font-size-normal;
+  }
+}

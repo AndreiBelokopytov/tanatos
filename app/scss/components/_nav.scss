@@ -1,0 +1,30 @@
+ul.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+
+    > a {
+      display: block;
+      color: $color-initial;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.nav-horizontal {
+  ul {
+    li + li {
+      margin-left: 1.5em;
+    }
+  }
+}
+
+.nav-icon {
+  vertical-align: middle;
+}

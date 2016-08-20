@@ -1,0 +1,32 @@
+$form-font-size-small: 1.2rem;
+$form-font-size-normal: 1.6rem;
+
+#{$all-text-inputs} {
+  border: 0;
+  border-radius: $border-default-radius;
+  color: $color-secondary;
+  display: block;
+  width: 100%;
+  font-size: $form-font-size-small;
+  line-height: 1.5em;
+  padding: .8125em 1.25em;
+  margin-bottom: 3.0em;
+
+  @include media($small-tablet) {
+    font-size: $form-font-size-normal;
+  }
+
+  @include media($desktop) {
+    font-size: $form-font-size-normal;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.form-inline {
+  #{$all-text-inputs} {
+    display: inline-block;
+  }
+}

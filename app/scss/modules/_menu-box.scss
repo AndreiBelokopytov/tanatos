@@ -1,0 +1,56 @@
+.menu-box {
+  @include outer-container();
+
+  .menu-box-items {
+    ul {
+      display: block;
+
+      > li {
+        display: block;
+
+        > a {
+          font-size: 3.5em;
+          line-height: 2;
+          font-weight: 600;
+          color: $color-initial;
+          cursor: pointer;
+          text-transform: uppercase;
+          text-align: center;
+
+          &:hover {
+            color: $color-primary;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-box-header {
+    @include row;
+    padding: 4em 1.4em;
+  }
+
+  .menu-box-close {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .menu-box-line {
+    display: block;
+    margin: 3.5rem auto;
+    width: 16.6rem;
+    height: .4rem;
+    color: $color-primary;
+    background-color: $color-primary;
+    border: 0;
+  }
+
+  .menu-box-social {
+    ul {
+      li + li {
+        margin-left: 1.6em;
+      }
+    }
+  }
+}

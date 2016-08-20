@@ -1,0 +1,10 @@
+a {
+  color: $link-color-default;
+  font-size: 1em;
+  text-decoration: none;
+
+  &:hover {
+    color: tint($link-color-default, 20%);
+    text-decoration: $link-decoration-default;
+  }
+}

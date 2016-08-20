@@ -1,0 +1,12 @@
+$max-width: $content-width;
+$grid-columns: $columns-count;
+
+.container-fixed {
+  @include outer-container();
+  @include pad(0 1.5rem);
+  height: 100%;
+}
+
+.row {
+  @include row;
+}

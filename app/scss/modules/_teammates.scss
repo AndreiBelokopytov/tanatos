@@ -1,0 +1,59 @@
+.teammates-content {
+  @include row;
+  @include media($tablet) {
+    padding-top: 8em;
+  }
+}
+
+.teammate {
+  display: block;
+}
+
+.teammate:hover {
+  .teammate-avatar {
+    position: relative;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 6px solid $color-primary;
+    filter: initial;
+  }
+}
+
+.teammate-header {
+  padding: 0 2.2em;
+  text-align: center;
+
+  h3 {
+    line-height: 1.2em;
+  }
+}
+
+.teammate-avatar {
+  height: 25em;
+  margin-bottom: 2.5em;
+  background-position: center;
+  background-size: cover;
+  border-radius: $border-default-radius;
+  filter: grayscale(1);
+  cursor: pointer;
+}
+
+@include media($desktop) {
+  .teammate-avatar {
+    height: 28.3em;
+  }
+}
+
+.teammate-social {
+  margin-bottom: 3.0em;
+}
+
+.teammate-about {
+  padding: 0 1.5em;
+  text-align: center;
+  line-height: 1.857;
+
+  @include media($small-tablet) {
+    font-size: 1.14285em;
+  }
+}

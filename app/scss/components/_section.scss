@@ -1,0 +1,44 @@
+.section {
+  position: relative;
+}
+
+.section-padding {
+  padding-top: 5em;
+
+  @include media($small-tablet) {
+    padding-top: 10em;
+  }
+}
+
+.section-header-wrap {
+  @include row;
+}
+
+.section-header {
+  margin-bottom: 5em;
+
+  @include media($small-tablet) {
+    margin-bottom: 5.6em;
+  }
+
+  @include media($tablet) {
+    @include span-columns(1 of 2);
+    @include shift(1 of 4);
+  }
+}
+
+.section-title {
+  margin-bottom: 0;
+  text-align: center;
+
+  + p {
+    font-size: 1.6em;
+    line-height: calc(3 / 1.6);
+    text-align: center;
+  }
+}
+
+.wrapper-content {
+  position: relative;
+  height: 100%;
+}

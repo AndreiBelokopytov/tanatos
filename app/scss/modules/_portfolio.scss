@@ -1,0 +1,103 @@
+$portfolio-item-border-radius: $border-default-radius;
+
+.portfolio-demos {
+  @include row;
+  margin-bottom: 10em;
+}
+
+.portfolio-item {
+  position: relative;
+  background-color: $ligh-gray;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: $portfolio-item-border-radius;
+  height: 30em;
+  margin-top: 3rem;
+  cursor: pointer;
+  @include span-columns(1 of 1, inline-block);
+
+  &:hover > .portfolio-item-description {
+    opacity: 1;
+  }
+
+  @include media($small-tablet-stop) {
+     @include span-columns(1 of 2, inline-block);
+    @include omega(2n);
+  }
+
+  @include media($tablet-stop) {
+      height: 32em;
+      @include span-columns(1 of 3, inline-block);
+      @include omega(3n);
+  }
+
+  @include media($desktop) {
+      height: 36em;
+      @include span-columns(1 of 3, inline-block);
+      @include omega(3n);
+  }
+}
+
+.portfolio-item-description {
+  @include position(absolute, 0 0 0 0);
+  @include transition(opacity, .6s, ease-in);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3em 2.6em;
+  color: $color-initial;
+  cursor: pointer;
+  opacity: 0;
+
+  &::before {
+    @include position(absolute, 0 0 0 0);
+    content: '';
+    background: $color-primary;
+    opacity: .9;
+    border-radius: $portfolio-item-border-radius;
+  }
+
+  button {
+    position: relative;
+    width: 90%;
+  }
+
+  @include media($tablet) {
+    padding: 4em 4.6em;
+  }
+}
+
+.portfolio-wrapper-content {
+  @extend .wrapper-content;
+  text-align: center;
+
+  h3 {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 1.4em;
+    line-height: 1.857;
+    text-align: center;
+  }
+}
+
+.portfolio-actions {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10em;
+
+  button {
+    @include span-columns(1 of 1);
+
+    @include media($tablet) {
+      @include span-columns(1 of 4);
+    }
+  }
+}

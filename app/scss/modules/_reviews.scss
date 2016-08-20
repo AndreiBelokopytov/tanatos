@@ -1,0 +1,88 @@
+.reviews {
+  background: $color-secondary url('../img/reviews_bg.png') 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.reviews-slider-wrap {
+  position: relative;
+  padding: 5em 0;
+  @include media($small-tablet) {
+    padding: 10em 0;
+  }
+}
+
+.reviews-list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.review-item {
+  display: block;
+  color: #fff;
+}
+
+.review-author-avatar {
+  text-align: center;
+  margin-bottom: 3.4em;
+
+  > img {
+    display: inline-block;
+    width: 12.2em;
+    height: 12.2em;
+    vertical-align: middle;
+    border-radius: 50%;
+  }
+}
+
+.review-quote {
+  font-size: .8em;
+
+  blockquote {
+    font-size: 2.5em;
+    font-style: italic;
+    text-align: center;
+    margin: 0 0 1em 0;
+  }
+
+  cite {
+    display: block;
+    font-size: 1.8em;
+    text-align: center;
+    font-style: normal;
+  }
+
+  @include media($small-tablet) {
+    font-size: 1em;
+  }
+}
+
+%reviews-slide-icon {
+  @include position(absolute, 50% null null null);
+  display: none;
+  width: 2.1em;
+  height: 4em;
+  background: url('../img/slider/icon_arrow.png') 50% 50% no-repeat;
+  cursor: pointer;
+}
+
+@include media($desktop) {
+  %reviews-slide-icon {
+    display: inline-block;
+  }
+}
+
+.reviews-slide-left {
+  @extend %reviews-slide-icon;
+  left: 0;
+  margin-top: -2em;
+  margin-left: -2em;
+  transform: rotate(180deg);
+}
+
+.reviews-slide-right {
+  @extend %reviews-slide-icon;
+  margin-top: -2em;
+  margin-right: -2em;
+  right: 0;
+}
