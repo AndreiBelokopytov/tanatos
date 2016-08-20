@@ -1,5 +1,7 @@
 #Tanatos HTML5 template
 
+##Based on [https://symu.co/](https://symu.co) Tanatos free PSD template.
+
 ## Setup and run
 
 Install node.js dependencies with
