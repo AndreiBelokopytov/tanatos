@@ -51,7 +51,7 @@ let jsProductionPipe = lazypipe()
   })
 
 gulp.task('clean', () => {
-  return del(paths.dest.root)
+  return del([`${paths.dest.root}/**`, `!${paths.dest.root}`, `!${paths.dest.root}/.git`])
 })
 
 gulp.task('build:sass', () => {
