@@ -16,11 +16,11 @@
   @include row();
   text-align: left;
 
-  h3 {
+  h4 {
     margin-bottom: .8em;
   }
 
-  h3 + p {
+  h4 + p {
     line-height: 1.857;
   }
 

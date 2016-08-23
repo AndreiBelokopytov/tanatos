@@ -52,8 +52,4 @@
   padding: 0 1.5em;
   text-align: center;
   line-height: 1.857;
-
-  @include media($small-tablet) {
-    font-size: 1.14285em;
-  }
 }
