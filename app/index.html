@@ -38,7 +38,7 @@
               <h1>We design <span class="highlighted">things</span></h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim quidem, eligendi animi! A dicta quas, cupiditate. Repellat possimus, sapiente nihil.</p>
               <div class="promo-actions">
-                <a class="button button-primary">Hire us</a>
+                <a class="button button-primary" id="hire-us-open">Hire us</a>
                 <a class="button button-primary" href="#portfolio">Our works</a>
               </div>
             </div>
@@ -423,6 +423,33 @@
       </div>
     </footer>
   </main>
+
+  <div class="modal" id="hire-us-modal">
+    <div class="shadow-bg"></div>
+    <div class="hire-us">
+      <div class="modal-content">
+        <a href="#" id="hire-us-close" class="hire-us-close">x</a>
+        <form class="hire-us-form" action="">
+          <div class="hire-us-header">
+            <h2 class="section-title">Hire <span class="highlighted">us</span></h2>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="row">
+            <input type="email" name="email" placeholder="Your email">
+          </div>
+          <div class="row">
+            <input type="text" name="subject" placeholder="Subject">
+          </div>
+          <div class="row">
+            <textarea name="message" placeholder="Message"></textarea>
+          </div>
+          <div class="row">
+            <button class="button button-primary hire-us-submit" type="button">Send message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <div class="modal" id="menu-modal">
     <div class="shadow-bg"></div>

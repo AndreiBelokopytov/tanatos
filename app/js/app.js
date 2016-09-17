@@ -8,7 +8,10 @@
         $reviewsNavRight = $('.reviews-slide-right'),
         $contactSocialLink = $('.contact-social a'),
         $menuModal = $modal('#menu-modal'),
+        $hireUsModal = $modal('#hire-us-modal'),
         $menuModalLinks = $('#menu-modal .menu-box ul >li > a'),
+        $hireUsOpen = $('#hire-us-open'),
+        $hireUsClose = $('#hire-us-close'),
         $menuOpen = $('#menu-open'),
         $menuClose = $('#menu-close');
 
@@ -45,6 +48,14 @@
       $menuModal.hide();
     });
 
+    $hireUsOpen.on('click', function() {
+      $hireUsModal.show();
+    });
+
+    $hireUsClose.on('click', function() {
+      $hireUsModal.hide();
+    });
+
     function $modal(selector) {
       var $el = $(selector);
       var $content = $el.find('.modal-content');
@@ -57,18 +68,18 @@
           $content.one(animationEnd, function() {
             $content.removeClass('fadeInDown');
           });
-          $el.addClass('menu-modal-visible');
+          $el.addClass('modal-visible');
           $content.addClass('fadeInDown');
         },
         hide: function() {
           $content.one(animationEnd, function() {
-            $el.removeClass('menu-modal-visible');
+            $el.removeClass('modal-visible');
             $content.removeClass('fadeOutUp');
           });
           $content.addClass('fadeOutUp');
         },
         close: function() {
-          $el.removeClass('menu-modal-visible');
+          $el.removeClass('modal-visible');
         }
       };
 

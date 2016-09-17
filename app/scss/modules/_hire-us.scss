@@ -1,0 +1,72 @@
+$hire-us-font-size: 1.6em;
+
+.hire-us {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, -50%);
+
+  .modal-content {
+    background: #fff;
+    padding: 4em;
+  }
+
+  .hire-us-header {
+    margin-bottom: 45px;
+  }
+
+  .hire-us-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: em(4em, $hire-us-font-size);
+    height:  em(4em, $hire-us-font-size);
+    line-height: em(4em, $hire-us-font-size);
+    border-radius: 50%;
+    background-color: $color-secondary;
+    color: #fff;
+    font-size: $hire-us-font-size;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.05em;
+    transform: translate(50%, -50%);
+  }
+
+  @include media($small-tablet) {
+    @include span-columns(3 of 4);
+
+    .modal-content {
+      padding: 6em 10em;
+    }
+  }
+
+  @include media($tablet) {
+    @include span-columns(1 of 2);
+  }
+}
+
+.hire-us-form {
+  #{$all-text-inputs} {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $ligh-gray;
+    border-radius: $border-default-radius;
+    margin-bottom: em(3em, $hire-us-font-size);
+  }
+
+  textarea {
+    height: em(22em, $hire-us-font-size);
+
+    @include media($desktop) {
+      height: em(30em, $hire-us-font-size);
+    }
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+  }
+}
