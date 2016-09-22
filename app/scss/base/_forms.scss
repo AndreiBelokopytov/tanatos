@@ -11,6 +11,7 @@ $form-font-size-normal: 1.6rem;
   line-height: 1.5em;
   padding: .8125em 1.25em;
   margin-bottom: 3.0em;
+  outline: none;
 
   @include media($small-tablet) {
     font-size: $form-font-size-normal;
