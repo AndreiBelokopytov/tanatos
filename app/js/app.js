@@ -56,6 +56,8 @@
       $hireUsModal.hide();
     });
 
+    preloadImages();
+
     function $modal(selector) {
       var $el = $(selector);
       var $content = $el.find('.modal-content');
@@ -84,6 +86,28 @@
       };
 
       return $.extend($el, modalProps);
+    }
+
+    function preloadImages() {
+      $(document).find('[preload-bg]').each(function(index, el) {
+        var $el = $(el);
+        var url = $el.attr('preload-bg');
+        var img = new Image();
+        img.onload = function() {
+          var position = $el.css('position');
+          if (position !== 'relative' && position !== 'absolute') {
+            $es.css('position', 'relative');
+          }
+          var bg = $('<div>');
+          bg.addClass('bg-image-cover');
+          bg.css('background-image', 'url(' + url + ')');
+          $el.prepend(bg);
+          window.setTimeout(function() {
+            bg.css('opacity', 1);
+          }, 0);
+        };
+        img.src = url;
+      });
     }
   });
 })();
