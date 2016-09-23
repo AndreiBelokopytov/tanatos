@@ -96,7 +96,7 @@
         img.onload = function() {
           var position = $el.css('position');
           if (position !== 'relative' && position !== 'absolute') {
-            $es.css('position', 'relative');
+            $el.css('position', 'relative');
           }
           var bg = $('<div>');
           bg.addClass('bg-image-cover');
