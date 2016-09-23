@@ -9,16 +9,6 @@
   display: block;
 }
 
-.teammate:hover {
-  .teammate-avatar {
-    position: relative;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom: 6px solid $color-primary;
-    filter: initial;
-  }
-}
-
 .teammate-header {
   padding: 0 2.2em;
   text-align: center;
@@ -36,6 +26,14 @@
   border-radius: $border-default-radius;
   filter: grayscale(1);
   cursor: pointer;
+
+  &:hover {
+    position: relative;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom: 6px solid $color-primary;
+    filter: initial;
+  }
 }
 
 @include media($desktop) {
@@ -46,6 +44,10 @@
 
 .teammate-social {
   margin-bottom: 3.0em;
+
+  ul > li a {
+    @include hover-overlay();
+  }
 }
 
 .teammate-about {

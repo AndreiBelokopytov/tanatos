@@ -3,3 +3,23 @@
   opacity: .9;
 }
 
+@mixin hover-overlay($color-overlay: rgba(255, 255, 255, .255), $radius: 50%) {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-overlay;
+    border-radius: $radius;
+    transition: opacity .3s ease;
+    opacity: 0;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}

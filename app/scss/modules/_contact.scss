@@ -42,11 +42,14 @@
     display: block;
     text-align: center;
 
-    li > a:hover {
-      animation: flip;
-    }
-    li + li {
-      margin-left: 2em;
+    li {
+      a {
+        @include hover-overlay();
+      }
+      
+      + li {
+        margin-left: 2em;
+      }
     }
   }
 
