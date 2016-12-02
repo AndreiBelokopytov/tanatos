@@ -22,7 +22,7 @@ $form-font-size-normal: 1.6rem;
   }
 }
 
-#{$all-text-inputs}::placeholder {
+#{$all-text-inputs::placeholder} {
  font-weight: 300;
  color: $color-secondary; 
 }
